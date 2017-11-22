@@ -4,15 +4,18 @@ Linux:
 
 sudo apt-get install build-essential git cmake libboost1.55-all-dev
 sudo apt-get install qtbase5-dev
-Windows Dependencies: MSVC 2013 or later, CMake 2.8.6 or later, Boost 1.55, Qt 5.7. You may download them from: http://www.microsoft.com/ http://www.cmake.org/ http://www.boost.org/ https://www.qt.io/
+Windows Dependencies: MSVC 2013 or later, CMake 2.8.6 or later, Boost 1.55, Qt 5.7. 
+You may download them from: http://www.microsoft.com/ http://www.cmake.org/ http://www.boost.org/ https://www.qt.io/
 
-1. Clone wallet sources
+**1. Clone wallet sources
 
 git clone https://github.com/dkmi/eBGNWallet.git
-2 (Linux). Build
+
+**2 (Linux). Build
 
 cp cryptonote/src/Platform/Posix/System/* cryptonote/src/System
 mkdir build && cd build && cmake .. && make
+
 **3 (OS X / macOS)
 
 Install Xcode from AppStore
@@ -69,12 +72,12 @@ with isEmpty($$list($$system("/usr/bin/xcrun -find xcodebuild 2>/dev/null")))
 
 More info: http://stackoverflow.com/a/35098040/1683164
 
-4 (Windows). Build
+**4 (Windows). Build
 
 cmake -G "Visual Studio 12" -DCMAKE_PREFIX_PATH=C:\Qt\5.8\msvc2013
 This will create a engncoin.sln file which you can open in Visual Studio and build.
 
-4 (Windows). Additional Files Required to run
+**4 (Windows). Additional Files Required to run
 
 For Windows, some QT files are also required. Copy the following from Qt to the eBGNCoin executable folder:
 
